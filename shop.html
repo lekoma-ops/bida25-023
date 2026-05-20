@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoHard Clothing BW | Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+      <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>GOHARD</h1>
+                <span class="tagline">CLOTHING BW</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">HOME</a></li>
+                <li><a href="about.html" class="nav-item">ABOUT</a></li>
+                <li><a href="shop.html" class="nav-item">SHOP</a></li>
+                <li><a href="blog.html" class="nav-item">BLOG</a></li>
+                <li><a href="contact.html" class="nav-item">CONTACT</a></li>
+                <li><a href="feedback.html" class="nav-item">FEEDBACK</a></li>
+            </ul>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html" onclick="toggleMobileMenu()">HOME</a></li>
+                <li><a href="about.html" onclick="toggleMobileMenu()">ABOUT</a></li>
+                <li><a href="shop.html" onclick="toggleMobileMenu()">SHOP</a></li>
+                <li><a href="blog.html" onclick="toggleMobileMenu()">BLOG</a></li>
+                <li><a href="contact.html" onclick="toggleMobileMenu()">CONTACT</a></li>
+                <li><a href="feedback.html" onclick="toggleMobileMenu()">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- FILTERS -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="section-header" style="flex-wrap: wrap; gap: 1rem;">
+            <div class="filters">
+                <button onclick="filterCategory('all')" class="filter-btn active">ALL</button>
+                <button onclick="filterCategory('acid')" class="filter-btn">ACID WASH</button>
+                <button onclick="filterCategory('wind')" class="filter-btn">WIND BREAKERS</button>
+                <button onclick="filterCategory('tee')" class="filter-btn">OVERSIZED TEES</button>
+                <button onclick="filterCategory('hoodie')" class="filter-btn">HOODIES</button>
+                <button onclick="filterCategory('cap')" class="filter-btn">HATS &amp; CAPS</button>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <select id="sort-select" onchange="sortProducts()" style="padding: 12px 20px; border-radius: 50px; background: #151515; color: #fff; border: none;">
+                    <option value="default">Sort by: Newest</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="product-grid" id="shop-grid">
+            <!-- Populated by JS -->
+        </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/26774022370?text=Hi%20GoHard!%20I%27m%20shopping%20on%20your%20site%20and%20need%20help%20with%20an%20order" 
+       target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i> Chat Now
+    </a>
+
+    <!-- FOOTER - COPY THIS FROM index.html -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>GOHARD CLOTHING BW</h3>
+                <p>Rooted in Francistown since 2010.<br>We Love Streetwear.</p>
+                <p><strong>Physical Stores:</strong><br>
+                • Mainmall Old CBD, Gaborone<br>
+                • Barclays Plaza Unit 47, Francistown
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">Our Story</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us • 24/7</h4>
+                <a href="https://wa.me/26774022370" target="_blank" class="whatsapp-footer"><i class="fab fa-whatsapp"></i> +267 74 022 370</a>
+                <p>Email: gohardclothingbw@gmail.com</p>
+                <p>Lay-bye available • 30% deposit</p>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <form id="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">JOIN THE MOVEMENT</button>
+                </form>
+                <small>Get early access to drops &amp; 10% off first order</small>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GoHard Clothing BW • All Rights Reserved</p>
+        </div>
+    </footer>
+
+        
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal()" class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

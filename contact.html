@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoHard Clothing BW | Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+     <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>GOHARD</h1>
+                <span class="tagline">CLOTHING BW</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">HOME</a></li>
+                <li><a href="about.html" class="nav-item">ABOUT</a></li>
+                <li><a href="shop.html" class="nav-item">SHOP</a></li>
+                <li><a href="blog.html" class="nav-item">BLOG</a></li>
+                <li><a href="contact.html" class="nav-item">CONTACT</a></li>
+                <li><a href="feedback.html" class="nav-item">FEEDBACK</a></li>
+            </ul>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html" onclick="toggleMobileMenu()">HOME</a></li>
+                <li><a href="about.html" onclick="toggleMobileMenu()">ABOUT</a></li>
+                <li><a href="shop.html" onclick="toggleMobileMenu()">SHOP</a></li>
+                <li><a href="blog.html" onclick="toggleMobileMenu()">BLOG</a></li>
+                <li><a href="contact.html" onclick="toggleMobileMenu()">CONTACT</a></li>
+                <li><a href="feedback.html" onclick="toggleMobileMenu()">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 4rem; max-width:1400px; margin:0 auto;">
+            
+            <!-- CONTACT FORM -->
+            <div>
+                <h2>Send us a message</h2>
+                <form onsubmit="submitContactForm(event)" style="margin-top:2rem;">
+                    <input type="text" placeholder="Your name" required style="width:100%; padding:18px; margin-bottom:1rem; border-radius:12px; background:#151515; border:none; color:#fff;">
+                    <input type="email" placeholder="Email" required style="width:100%; padding:18px; margin-bottom:1rem; border-radius:12px; background:#151515; border:none; color:#fff;">
+                    <textarea placeholder="What are you looking for? (order, stock check, custom, etc.)" rows="6" required style="width:100%; padding:18px; margin-bottom:1rem; border-radius:12px; background:#151515; border:none; color:#fff;"></textarea>
+                    <button type="submit" class="cta-button" style="width:100%;">SEND MESSAGE</button>
+                </form>
+            </div>
+
+            <!-- STORE LOCATIONS + MAP -->
+            <div>
+                <h2>Visit us in person</h2>
+                <div style="background:#151515; padding:2rem; border-radius:20px; margin-top:2rem;">
+                    <div style="margin-bottom:2rem;">
+                        <strong>Gaborone Store</strong><br>
+                        Mainmall Old CBD<br>
+                        +267 74 022 370<br>
+                        <a href="https://wa.me/26774022370" target="_blank" style="color:#25D366;">📍 Get directions on WhatsApp</a>
+                    </div>
+                    <div>
+                        <strong>Francistown Store</strong><br>
+                        Barclays Plaza, Unit 47 (Schekie Lifestyle Concept Store)<br>
+                        +267 74 022 370<br>
+                        <a href="https://wa.me/26774022370" target="_blank" style="color:#25D366;">📍 Get directions on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <!-- Google Maps Embed (Botswana stores area) -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30100.00000000001!2d25.912!3d-21.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c2a2f4e4d4e4e4d%3A0x4b4b4b4b4b4b4b4b!2sGaborone%2C%20Botswana!5e0!3m2!1sen!2sbw!4v1744840000000" 
+                        width="100%" height="300" style="border:0; border-radius:20px; margin-top:2rem;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+     <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>GOHARD CLOTHING BW</h3>
+                <p>Rooted in Francistown since 2010.<br>We Love Streetwear.</p>
+                <p><strong>Physical Stores:</strong><br>
+                • Mainmall Old CBD, Gaborone<br>
+                • Barclays Plaza Unit 47, Francistown
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">Our Story</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us • 24/7</h4>
+                <a href="https://wa.me/26774022370" target="_blank" class="whatsapp-footer"><i class="fab fa-whatsapp"></i> +267 74 022 370</a>
+                <p>Email: gohardclothingbw@gmail.com</p>
+                <p>Lay-bye available • 30% deposit</p>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <form id="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">JOIN THE MOVEMENT</button>
+                </form>
+                <small>Get early access to drops &amp; 10% off first order</small>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GoHard Clothing BW • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function submitContactForm(e) {
+            e.preventDefault();
+            alert("✅ Message received! Our team will reply on WhatsApp within minutes. Thank you for choosing GoHard ❤️");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>

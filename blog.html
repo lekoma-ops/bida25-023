@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoHard Clothing BW | Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>GOHARD</h1>
+                <span class="tagline">CLOTHING BW</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">HOME</a></li>
+                <li><a href="about.html" class="nav-item">ABOUT</a></li>
+                <li><a href="shop.html" class="nav-item">SHOP</a></li>
+                <li><a href="blog.html" class="nav-item">BLOG</a></li>
+                <li><a href="contact.html" class="nav-item">CONTACT</a></li>
+                <li><a href="feedback.html" class="nav-item">FEEDBACK</a></li>
+            </ul>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html" onclick="toggleMobileMenu()">HOME</a></li>
+                <li><a href="about.html" onclick="toggleMobileMenu()">ABOUT</a></li>
+                <li><a href="shop.html" onclick="toggleMobileMenu()">SHOP</a></li>
+                <li><a href="blog.html" onclick="toggleMobileMenu()">BLOG</a></li>
+                <li><a href="contact.html" onclick="toggleMobileMenu()">CONTACT</a></li>
+                <li><a href="feedback.html" onclick="toggleMobileMenu()">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 120px;">
+        <div class="section-header">
+            <h2>GoHard Voice • Street Stories</h2>
+        </div>
+        
+        <div class="blog-grid" id="blog-grid"></div>
+    </section>
+
+    <!-- FOOTER (same as other pages) -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>GOHARD CLOTHING BW</h3>
+                <p>Rooted in Francistown since 2010.<br>We Love Streetwear.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">Our Story</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us • 24/7</h4>
+                <a href="https://wa.me/26774022370" target="_blank" class="whatsapp-footer"><i class="fab fa-whatsapp"></i> +267 74 022 370</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GoHard Clothing BW • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        
+        const blogPosts = [
+            {
+                title: "Acid Wash Collection Just Dropped 🔥",
+                date: "April 18, 2026",
+                excerpt: "Our boldest acid wash tees are here. Heavy 250gsm fabric with that signature GoHard patch.",
+                img: "images/acid.jpg"
+            },
+            {
+                title: "Full Tracksuit Drop – Windbreaker + Pants",
+                date: "April 15, 2026",
+                excerpt: "The complete GoHard tracksuit set is now available. Reflective piping, perfect for the streets.",
+                img: "images/wind.jpg"
+            },
+            {
+                title: "Francistown Studio Vibes",
+                date: "April 12, 2026",
+                excerpt: "Behind the scenes at our Francistown store. Real faces, real culture, real streetwear.",
+                img: "images/ftown.jpg"
+            },
+            
+        ];
+
+        function loadBlog() {
+            const grid = document.getElementById('blog-grid');
+            grid.innerHTML = blogPosts.map(post => `
+                <div class="blog-card">
+                    <img src="${post.img}" style="width:100%; height:280px; object-fit:cover;">
+                    <div style="padding:1.5rem;">
+                        <small>${post.date}</small>
+                        <h3 style="margin:1rem 0 0.5rem;">${post.title}</h3>
+                        <p>${post.excerpt}</p>
+                        
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Load blog when page opens
+        window.onload = loadBlog;
+    </script>
+</body>
+</html>

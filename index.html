@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GoHard Clothing BW - We Love Streetwear | Botswana's boldest streetwear brand since 2010">
+    <title>GoHard Clothing BW | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>GOHARD</h1>
+                <span class="tagline">CLOTHING BW</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">HOME</a></li>
+                <li><a href="about.html" class="nav-item">ABOUT</a></li>
+                <li><a href="shop.html" class="nav-item">SHOP</a></li>
+                <li><a href="blog.html" class="nav-item">BLOG</a></li>
+                <li><a href="contact.html" class="nav-item">CONTACT</a></li>
+                <li><a href="feedback.html" class="nav-item">FEEDBACK</a></li>
+            </ul>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html" onclick="toggleMobileMenu()">HOME</a></li>
+                <li><a href="about.html" onclick="toggleMobileMenu()">ABOUT</a></li>
+                <li><a href="shop.html" onclick="toggleMobileMenu()">SHOP</a></li>
+                <li><a href="blog.html" onclick="toggleMobileMenu()">BLOG</a></li>
+                <li><a href="contact.html" onclick="toggleMobileMenu()">CONTACT</a></li>
+                <li><a href="feedback.html" onclick="toggleMobileMenu()">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <header class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="hero-badge">#WeLoveStreetwear</div>
+                <h1 class="hero-title">GO HARD<br>OR GO HOME</h1>
+                <p class="hero-subtitle">Premium Botswana streetwear since 2010.<br>Acid wash, windbreakers, oversized fits &amp; bold silhouettes made for the streets of Gaborone &amp; beyond.</p>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- NEW ARRIVALS (mimicking Wearix) -->
+    <section class="section new-arrivals">
+        <div class="section-header">
+            <h2>Fresh Fits • Latest Drop</h2>
+            <a href="shop.html" class="see-all">See all collections <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="product-grid" id="new-arrivals-grid">
+            
+        </div>
+    </section>
+
+    <section class="section blog-preview">
+        <div class="section-header">
+            <h2>GoHard Voice</h2>
+            <a href="blog.html" class="see-all">Read the full blog <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-grid">
+            
+        </div>
+    </section>
+
+    <section class="section stay-connected">
+        <h2>See the community in real street fits</h2>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/gohard_clothingbw" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/26774022370" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/GoHardClothingBW" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p class="connect-text">@gohard_clothingbw • #gohardorgohome</p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>GOHARD CLOTHING BW</h3>
+                <p>Rooted in Francistown since 2010.<br>We Love Streetwear.</p>
+                <p><strong>Physical Stores:</strong><br>
+                • Mainmall Old CBD, Gaborone<br>
+                • Barclays Plaza Unit 47, Francistown
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">Our Story</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us • 24/7</h4>
+                <a href="https://wa.me/26774022370" target="_blank" class="whatsapp-footer"><i class="fab fa-whatsapp"></i> +267 74 022 370</a>
+                <p>Email: gohardclothingbw@gmail.com</p>
+                <p>Lay-bye available • 30% deposit</p>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <form id="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">JOIN THE MOVEMENT</button>
+                </form>
+                <small>Get early access to drops &amp; 10% off first order</small>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GoHard Clothing BW • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

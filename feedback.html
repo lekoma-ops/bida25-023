@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoHard Clothing BW | Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>GOHARD</h1>
+                <span class="tagline">CLOTHING BW</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">HOME</a></li>
+                <li><a href="about.html" class="nav-item">ABOUT</a></li>
+                <li><a href="shop.html" class="nav-item">SHOP</a></li>
+                <li><a href="blog.html" class="nav-item">BLOG</a></li>
+                <li><a href="contact.html" class="nav-item">CONTACT</a></li>
+                <li><a href="feedback.html" class="nav-item">FEEDBACK</a></li>
+            </ul>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html" onclick="toggleMobileMenu()">HOME</a></li>
+                <li><a href="about.html" onclick="toggleMobileMenu()">ABOUT</a></li>
+                <li><a href="shop.html" onclick="toggleMobileMenu()">SHOP</a></li>
+                <li><a href="blog.html" onclick="toggleMobileMenu()">BLOG</a></li>
+                <li><a href="contact.html" onclick="toggleMobileMenu()">CONTACT</a></li>
+                <li><a href="feedback.html" onclick="toggleMobileMenu()">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 120px;">
+        <div class="section-header">
+            <h2>Customer Feedback</h2>
+        </div>
+
+        <div style="max-width: 700px; margin: 0 auto;">
+            <div class="feedback-form" style="background:#151515; padding: 3rem; border-radius: 24px;">
+                <h3 style="text-align:center; margin-bottom: 2rem;">We value your opinion</h3>
+                
+                <form id="feedback-form" onsubmit="submitFeedback(event)">
+                    
+                    <input type="text" id="name" placeholder="Your Full Name" required>
+                    
+                    <input type="email" id="email" placeholder="Your Email Address" required>
+                    
+                    <textarea id="message" placeholder="Please share your feedback about our products, service, delivery or anything else..." 
+                              rows="8" required></textarea>
+
+                    <button type="submit" class="cta-button" style="width:100%; margin-top: 1.5rem;">
+                        SUBMIT FEEDBACK
+                    </button>
+                </form>
+            </div>
+
+            <p style="text-align:center; margin-top: 2rem; color:#aaa;">
+                Thank you for helping us serve you better ❤️
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>GOHARD CLOTHING BW</h3>
+                <p>Rooted in Francistown since 2010.<br>We Love Streetwear.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">Our Story</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <a href="https://wa.me/26774022370" target="_blank" class="whatsapp-footer">
+                    <i class="fab fa-whatsapp"></i> +267 74 022 370
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GoHard Clothing BW • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function submitFeedback(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            
+            alert(`✅ Thank you ${name}!\n\nYour feedback has been successfully submitted.\nWe really appreciate your input! 🔥`);
+            
+            // Reset form
+            e.target.reset();
+        }
+
+        window.onload = highlightCurrentPage;
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoHard Clothing BW | About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+   
+      <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>GOHARD</h1>
+                <span class="tagline">CLOTHING BW</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">HOME</a></li>
+                <li><a href="about.html" class="nav-item">ABOUT</a></li>
+                <li><a href="shop.html" class="nav-item">SHOP</a></li>
+                <li><a href="blog.html" class="nav-item">BLOG</a></li>
+                <li><a href="contact.html" class="nav-item">CONTACT</a></li>
+                <li><a href="feedback.html" class="nav-item">FEEDBACK</a></li>
+            </ul>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html" onclick="toggleMobileMenu()">HOME</a></li>
+                <li><a href="about.html" onclick="toggleMobileMenu()">ABOUT</a></li>
+                <li><a href="shop.html" onclick="toggleMobileMenu()">SHOP</a></li>
+                <li><a href="blog.html" onclick="toggleMobileMenu()">BLOG</a></li>
+                <li><a href="contact.html" onclick="toggleMobileMenu()">CONTACT</a></li>
+                <li><a href="feedback.html" onclick="toggleMobileMenu()">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="section" style="padding-top: 120px;">
+        <div class="section-header">
+            <h2>Our Story • Since 2010</h2>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; font-size: 1.3rem; line-height: 1.8;">
+            <p>GoHard Clothing BW was born in the streets of Francistown in 2010. What started as a small passion project by local creatives has grown into Botswana’s loudest voice in streetwear.</p>
+            <p>We don’t just make clothes — we create culture. From acid-wash drops that lit up Gaborone to windbreakers that survive the Botswana heat and dust, every piece is designed for the ones who GO HARD every single day.</p>
+            <p>Physical stores in Francistown (Barclays Plaza) and Gaborone (Mainmall Old CBD). Worn by artists, athletes, and everyday hustlers across Southern Africa.</p>
+        </div>
+    </section>
+
+     <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>GOHARD CLOTHING BW</h3>
+                <p>Rooted in Francistown since 2010.<br>We Love Streetwear.</p>
+                <p><strong>Physical Stores:</strong><br>
+                • Mainmall Old CBD, Gaborone<br>
+                • Barclays Plaza Unit 47, Francistown
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">Our Story</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us • 24/7</h4>
+                <a href="https://wa.me/26774022370" target="_blank" class="whatsapp-footer"><i class="fab fa-whatsapp"></i> +267 74 022 370</a>
+                <p>Email: gohardclothingbw@gmail.com</p>
+                <p>Lay-bye available • 30% deposit</p>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <form id="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">JOIN THE MOVEMENT</button>
+                </form>
+                <small>Get early access to drops &amp; 10% off first order</small>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GoHard Clothing BW • All Rights Reserved</p>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
